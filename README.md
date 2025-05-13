@@ -55,8 +55,12 @@ In this exercise you will:
 **Provide:**
 
 ```bash
-# 1) The exact ssh command you ran
-# 2) A detailed, step-by-step explanation of what happened at each stage
+1) Ich bin bei dem Remote Server auf die Eingabeaufforderung gegangen und gab zunächst den Befehl ipconfig ein um die IP-Adresse zu erfragen.
+2) Dann habe ich mit "ssh benutzer@ipadresse" die Verbindung herzustellen.
+3) Nun gibt mir die shell das Feedback das der Kontaktaufbau erfolgreich war.
+   desweiteren Erfragt er ob ich dieser Quelle vertraue.
+4) Nach Bestätigung erfragt er das Userpasswort.
+5) Mit Befehl Exit hab ich mich wieder getrennt. 
 ```
 
 ---
@@ -80,15 +84,22 @@ In this exercise you will:
    * How the **private key** is used to sign challenges.
    * How the **public key** on the server verifies signatures without revealing the private key.
    * Why Ed25519 is preferred (performance, security).
+     Sicherer
+     Kleiner und damit schneller
+     OpenSSH unterstützt
 
 **Provide:**
 
 ```bash
-# 1) The ssh-keygen command you ran
-# 2) The file paths of the generated keys
-# 3) Your written explanation (3–5 sentences) of the signature process
-```
+# 1) ssh-keygen -t ed25519 -C NickTluczykont@shellz.xshellz.com
 
+# 2) alicja@AX15:~$ cd .ssh
+alicja@AX15:~/.ssh$ touch config
+alicja@AX15:~/.ssh$ sudo nano config
+[sudo] password for alicja:
+alicja@AX15:~/.ssh$ ssh my-remote
+# 3) 
+````
 ---
 
 ### Task 3: SSH Config File
@@ -125,8 +136,11 @@ In this exercise you will:
 **Provide:**
 
 ```text
-# 1) The full contents of your ~/.ssh/config
-# 2) A short explanation (3–4 sentences) of how the config simplifies connections
+# 1)ServernameoderIP
+    User Nickname
+    Port 2222
+    IdentityFile ~/.ssh/id_rsa_custom
+# 2) Host ist dein Nickname und Hostname ist der Name des Servers oder auch die IP-Adresse
 ```
 
 ---
@@ -154,17 +168,20 @@ In this exercise you will:
 
    * Verify file timestamps and sizes after transfer, using `ls -la`
    * Note any flags you used (e.g., `-r`, `-P` for port).
+     
 5. Explain:
 
    * How `scp` initiates an SSH session for each transfer.
-   * The role of encryption in protecting data in transit.
+     Es baut bei dem Befehl jedes mal seperat eine Verbindung auf
+
+    * The role of encryption in protecting data in transit.
+      Die Daten werder so gesichert das keiner diese abgreifen kann, auch nicht die eigenen Skriptdaten der scp 
 
 **Provide:**
 
 ```bash
 # 1) Each scp command you ran
-# 2) Any flags or options used
-# 3) A brief explanation (2–3 sentences) of scp’s mechanism
+# 2) -v,-r
 ```
 
 ---
@@ -208,8 +225,10 @@ In this exercise you will:
 **Provide:**
 
 ```bash
-# 1) The contents of login_tasks.sh
-# 2) The lines you added to ~/.bashrc or ~/.profile
+# 1) Das profile ist das einlogen auf einer anderen konsole wären das bash das einlogen in die eigene schell darstellt
+# 2)
+  source	Lädt Skript in aktuelle Shell nichhts geht dabei Verloren
+./skript	Führt Skript in eigener Shell aus, Änderungen gehen verloren
 # 3) Your explanation (3–5 sentences) of shell init files and sourcing vs. executing
 ```
 
