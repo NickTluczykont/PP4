@@ -54,14 +54,14 @@ In this exercise you will:
 
 **Provide:**
 
-```bash
+
 1) Ich bin bei dem Remote Server auf die Eingabeaufforderung gegangen und gab zunächst den Befehl ipconfig ein um die IP-Adresse zu erfragen.
 2) Dann habe ich mit "ssh benutzer@ipadresse" die Verbindung herzustellen.
 3) Nun gibt mir die shell das Feedback das der Kontaktaufbau erfolgreich war.
    desweiteren Erfragt er ob ich dieser Quelle vertraue.
 4) Nach Bestätigung erfragt er das Userpasswort.
 5) Mit Befehl Exit hab ich mich wieder getrennt. 
-```
+
 
 ---
 
@@ -90,7 +90,7 @@ In this exercise you will:
 
 **Provide:**
 
-```bash
+
 # 1) ssh-keygen -t ed25519 -C NickTluczykont@shellz.xshellz.com
 
 # 2) alicja@AX15:~$ cd .ssh
@@ -99,8 +99,7 @@ alicja@AX15:~/.ssh$ sudo nano config
 [sudo] password for alicja:
 alicja@AX15:~/.ssh$ ssh my-remote
 # 3) 
-````
----
+```
 
 ### Task 3: SSH Config File
 
@@ -224,13 +223,13 @@ alicja@AX15:~/.ssh$ ssh my-remote
 
 **Provide:**
 
-```bash
+
 # 1) Das profile ist das einlogen auf einer anderen konsole wären das bash das einlogen in die eigene schell darstellt
 # 2)
   source	Lädt Skript in aktuelle Shell nichhts geht dabei Verloren
 ./skript	Führt Skript in eigener Shell aus, Änderungen gehen verloren
 # 3) Your explanation (3–5 sentences) of shell init files and sourcing vs. executing
-```
+
 
 ---
 
